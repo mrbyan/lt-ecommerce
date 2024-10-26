@@ -8,7 +8,7 @@
     <body>
         <!-- promo -->
         <div
-            class="w-full bg-neutral-900 h-10 text-white text-sm flex justify-center items-center"
+            class="w-full bg-neutral-900 h-10 text-white text-sm flex justify-center items-center gap-1"
         >
             <p>Get 25% OFF on your first order.</p>
             <a href="">Order Now</a>
@@ -17,13 +17,13 @@
         <!-- navbar -->
         <nav class="sticky top-0 inset-x-0 z-50 bg-white w-full">
             <div
-                class="container mx-auto flex justify-between items-center max-w-screen-lg h-[84px] text-neutral-900"
+                class="container mx-auto flex justify-between items-center lg:max-w-screen-lg sm:max-w-screen-sm h-[84px] text-neutral-900 px-3"
             >
                 <div class="flex items-center gap-2">
                     <div><img src="images/logo.png" alt="" /></div>
                     <p class="text-xl font-extrabold">Ecommerce</p>
                 </div>
-                <div>
+                <div class="lg:block hidden">
                     <ul class="flex gap-8 text-neutral-500 text-sm">
                         <li>Home</li>
                         <li>Categories</li>
@@ -31,7 +31,7 @@
                         <li>Contact</li>
                     </ul>
                 </div>
-                <div class="flex items-center gap-8">
+                <div class="lg:flex items-center gap-8 hidden">
                     <form action="">
                         <input
                             type="text"
@@ -44,32 +44,40 @@
                     <div><img src="icons/cart.svg" alt="" /></div>
                     <div><img src="icons/user.svg" alt="" /></div>
                 </div>
+                <div class="lg:hidden block">
+                    <img src="icons/Menu.svg" alt="" />
+                </div>
             </div>
         </nav>
 
         <!-- hero section -->
         <section>
             <div
-                class="container mx-auto pt-[84px] h-[440px] max-w-screen-lg mb-[88px]"
+                class="container mx-auto md:pt-[84px] md:h-[440px] lg:max-w-screen-lg sm:max-w-screen-sm mb-[88px] px-3"
             >
-                <div class="flex justify-between items-center">
-                    <div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center"
+                >
+                    <div class="order-2 md:order-1 md:text-left text-center">
                         <h1
-                            class="font-semibold text-neutral-800 text-[32px] mb-3"
+                            class="font-semibold text-neutral-800 md:text-[32px] text-2xl mb-3"
                         >
                             Fresh Arrivals Online
                         </h1>
-                        <p class="text-neutral-600 text-sm mb-12">
+                        <p class="text-neutral-600 text-sm md:mb-12 mb-6">
                             Discover Our Newest Collection Today.
                         </p>
+                        <div></div>
                         <button
-                            class="flex gap-2 bg-neutral-900 text-white px-6 py-[9.5px] rounded"
+                            class="flex gap-2 bg-neutral-900 text-white px-6 py-[9.5px] rounded mx-auto md:mx-0"
                         >
                             <p>View Collection</p>
                             <img src="icons/right.svg" alt="" />
                         </button>
                     </div>
-                    <div class="h-[382px] w-[344px]">
+                    <div
+                        class="md:h-[382px] md:w-[344px] w-3/4 order-1 md:order-2 md:mb-0 mb-8"
+                    >
                         <img src="images/hero-image.png" alt="" class="w-fit" />
                     </div>
                 </div>
@@ -77,10 +85,12 @@
         </section>
 
         <!-- feature section -->
-        <section class="container mx-auto max-w-screen-lg h-[218px] mb-[120px]">
-            <div class="grid grid-cols-3 gap-14">
-                <div class="py-7">
-                    <div class="px-3 mb-9">
+        <section
+            class="container mx-auto lg:max-w-screen-lg sm:max-w-screen-sm md:w-full w-3/4 md:h-[218px] mb-[120px] px-3"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-14">
+                <div class="md:py-7 py-4">
+                    <div class="md:mb-9 mb-4">
                         <img src="icons/Delivery.svg" alt="" />
                     </div>
                     <h6 class="mb-3 font-semibold text-base text-neutral-800">
@@ -91,8 +101,8 @@
                         orders! Don't miss out.
                     </p>
                 </div>
-                <div class="py-7">
-                    <div class="px-3 mb-9">
+                <div class="md:py-7 py-4">
+                    <div class="md:mb-9 mb-4">
                         <img src="icons/Star Badge.svg" alt="" />
                     </div>
                     <h6 class="mb-3 font-semibold text-base text-neutral-800">
@@ -103,8 +113,8 @@
                         it or get a refund.
                     </p>
                 </div>
-                <div class="py-7">
-                    <div class="px-3 mb-9">
+                <div class="md:py-7 py-4">
+                    <div class="md:mb-9 mb-4">
                         <img src="icons/Shield Check.svg" alt="" />
                     </div>
                     <h6 class="mb-3 font-semibold text-base text-neutral-800">
@@ -119,16 +129,20 @@
         </section>
 
         <!-- best selling section  -->
-        <section class="container mx-auto max-w-screen-lg mb-[168px]">
-            <div class="text-center mb-20">
+        <section
+            class="container mx-auto lg:max-w-screen-lg sm:max-w-screen-sm mb-[168px] px-3"
+        >
+            <div class="text-center md:mb-20 mb-10">
                 <p class="capitalize text-[12px] text-neutral-300">Shop Now</p>
                 <h2 class="font-bold text-neutral-900 text-2xl">
                     Best Selling
                 </h2>
             </div>
-            <div class="grid grid-cols-4 gap-5">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="text-center">
-                    <div><img src="images/best1.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/best1.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">
                         Classic Monochrome Tees
                     </h4>
@@ -138,7 +152,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/best2.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/best2.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">
                         Monochromatic Wardrobe
                     </h4>
@@ -148,7 +164,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/best3.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/best3.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">Essential Neutrals</h4>
                     <div class="flex justify-evenly font-medium text-[12px]">
                         <p>IN STOCK</p>
@@ -156,7 +174,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/best4.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/best4.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">UTRAANET Black</h4>
                     <div class="flex justify-evenly font-medium text-[12px]">
                         <p>IN STOCK</p>
@@ -167,39 +187,47 @@
         </section>
 
         <!-- cta section -->
-        <section class="container mx-auto max-w-screen-lg mb-[152px]">
+        <section
+            class="container mx-auto lg:max-w-screen-lg sm:max-w-screen-sm mb-[152px] px-3"
+        >
             <div class="flex justify-between items-center">
-                <div>
+                <div class="text-center md:text-left">
                     <h2 class="font-bold text-neutral-800 text-2xl mb-6">
                         Browse Our Fashion Paradise!
                     </h2>
-                    <p class="text-neutral-600 text-sm mb-8 w-3/4">
+                    <p
+                        class="text-neutral-600 text-sm md:mb-8 mb-6 w-3/4 mx-auto md:mx-0"
+                    >
                         Step into a world of style and explore our diverse
                         collection of clothing categories.
                     </p>
                     <button
-                        class="flex gap-2 bg-neutral-900 text-white px-6 py-[9.5px] rounded"
+                        class="flex gap-2 bg-neutral-900 text-white px-6 py-[9.5px] rounded mx-auto md:mx-0"
                     >
                         <p>Start Browsing</p>
                         <img src="icons/right.svg" alt="" />
                     </button>
                 </div>
-                <div class="h-[311px] w-[225px]">
+                <div class="h-[311px] w-[225px] md:block hidden">
                     <img src="images/cta-image.png" alt="" class="w-fit" />
                 </div>
             </div>
         </section>
 
         <!-- latest section -->
-        <section class="container mx-auto max-w-screen-lg mb-[192px]">
-            <div class="text-center mb-20">
+        <section
+            class="container mx-auto lg:max-w-screen-lg sm:max-w-screen-sm lg:mb-[192px] mb-[80px] px-3"
+        >
+            <div class="text-center md:mb-20 mb-10">
                 <h2 class="font-bold text-neutral-900 text-2xl">
                     Lates Product
                 </h2>
             </div>
-            <div class="grid grid-cols-4 gap-5">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="text-center">
-                    <div><img src="images/latest1.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/latest1.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">
                         Elegant Ebony Sweatshirts
                     </h4>
@@ -209,7 +237,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/latest2.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/latest2.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">
                         Sleek and Cozy Black
                     </h4>
@@ -219,7 +249,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/latest3.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/latest3.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">Raw Black Tees</h4>
                     <div class="flex justify-evenly font-medium text-[12px]">
                         <p>IN STOCK</p>
@@ -227,7 +259,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div><img src="images/latest4.png" alt="" /></div>
+                    <div class="grid place-content-center">
+                        <img src="images/latest4.png" alt="" />
+                    </div>
                     <h4 class="text-sm font-medium mb-3">MOCKUP Black</h4>
                     <div class="flex justify-evenly font-medium text-[12px]">
                         <p>IN STOCK</p>
@@ -239,18 +273,24 @@
 
         <!-- footer -->
         <footer>
-            <div class="container mx-auto max-w-screen-lg py-14">
-                <div class="flex justify-between items-center mb-[74px]">
-                    <div>
+            <div
+                class="container mx-auto lg:max-w-screen-lg sm:max-w-screen-sm md:py-14 py-7 px-3"
+            >
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center mb-[74px]"
+                >
+                    <div class="text-center md:text-left mb-6 md:mb-0">
                         <h2 class="font-bold text-neutral-800 text-2xl mb-6">
                             Join Our Newsletter
                         </h2>
-                        <p class="text-neutral-600 text-sm">
+                        <p
+                            class="text-neutral-600 text-sm w-3/4 md:w-full mx-auto md:mx-0"
+                        >
                             We love to surprise our subscribers with occasional
                             gifts.
                         </p>
                     </div>
-                    <form action="">
+                    <form action="" class="flex gap-2 flex-col lg:block">
                         <input
                             type="text"
                             placeholder="Your email address"
@@ -265,25 +305,35 @@
                         </button>
                     </form>
                 </div>
-                <div class="flex justify-between items-center mb-[104px]">
-                    <div class="w-1/4">
+                <div
+                    class="flex flex-col gap-8 md:flex-row justify-between items-center mb-[50px]"
+                >
+                    <div class="lg:w-1/4">
                         <div
-                            class="flex items-center gap-4 mb-3 text-neutral-900"
+                            class="flex items-center justify-center md:justify-normal gap-4 mb-3 text-neutral-900"
                         >
-                            <img src="images/Logomark.png" alt="" />
+                            <img
+                                src="images/Logomark.png"
+                                alt=""
+                                class="-ms-4"
+                            />
                             <p class="font-extrabold text-xl">Ecommerce</p>
                         </div>
-                        <p class="text-sm text-neutral-500 mb-8">
+                        <p
+                            class="text-sm text-neutral-500 mb-8 text-center md:text-left"
+                        >
                             DevCut is a YouTube channel for practical
                             project-based learning.
                         </p>
-                        <div class="flex gap-6">
+                        <div
+                            class="flex gap-6 justify-center md:justify-normal"
+                        >
                             <img src="icons/Github.svg" alt="" />
                             <img src="icons/Instagram.svg" alt="" />
                             <img src="icons/Youtube.svg" alt="" />
                         </div>
                     </div>
-                    <div class="flex gap-16">
+                    <div class="flex lg:gap-16 sm:gap-8 gap-16">
                         <div>
                             <h6
                                 class="font-medium text-sm text-neutral-300 mb-10"
@@ -328,25 +378,35 @@
                         </div>
                     </div>
                     <div>
-                        <h6 class="font-medium text-sm text-neutral-300 mb-10">
+                        <h6
+                            class="font-medium text-sm text-neutral-300 mb-10 text-center md:text-left"
+                        >
                             ACCEPTED PAYMENTS
                         </h6>
-                        <div class="flex gap-4">
-                            <img
-                                src="icons/Amex.svg"
-                                alt=""
-                                class="grayscale"
-                            />
-                            <img
-                                src="icons/Mastercard.svg"
-                                alt=""
-                                class="grayscale"
-                            />
-                            <img
-                                src="icons/Visa.svg"
-                                alt=""
-                                class="grayscale"
-                            />
+                        <div
+                            class="flex flex-row sm:flex-col lg:flex-row gap-4"
+                        >
+                            <div>
+                                <img
+                                    src="icons/Amex.svg"
+                                    alt=""
+                                    class="grayscale"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="icons/Mastercard.svg"
+                                    alt=""
+                                    class="grayscale"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="icons/Visa.svg"
+                                    alt=""
+                                    class="grayscale"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
